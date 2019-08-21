@@ -17,7 +17,7 @@ public class MyClient {
 		try {
 			Bootstrap bootstrap = new Bootstrap();
 			bootstrap.group(group).channel(NioSocketChannel.class).handler(new MyClientInitializer());
-			Channel channel = bootstrap.connect("", 8899).sync().channel();
+			Channel channel = bootstrap.connect("127.0.0.1", 8899).sync().channel();
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			for(;;) {
 				channel.writeAndFlush(br.readLine() + "\r\n");
