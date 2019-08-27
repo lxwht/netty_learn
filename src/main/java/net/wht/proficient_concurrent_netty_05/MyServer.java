@@ -8,6 +8,11 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
+/**
+ * 浏览器网页访问
+ * @author admin
+ *
+ */
 public class MyServer {
 
 	public static void main(String[] args) throws Exception {
