@@ -1,0 +1,38 @@
+syntax = "proto2";
+
+package net.wht.proficient_concurrent_netty_08_protobuf_netty;
+
+option optimize_for = SPEED;
+option java_package = "net.wht.proficient_concurrent_netty_08_protobuf_netty";
+option java_outer_classname = "ProgramLanguage";
+
+message MyLanguage {
+	
+	enum languageType {
+		Java = 1;
+		Sql = 2;
+		Js = 3;
+	}
+	required languageType language_type = 1;
+	
+	oneof languageBody {
+		Java java = 2;
+		Sql sql = 3;
+		Js js = 4;
+	}
+}
+
+message Java {
+	optional string name = 1;
+	optional string val = 2;
+}
+
+message Sql {
+	optional string name = 1;
+	optional string val = 2;
+}
+
+message Js {
+	optional string name = 1;
+	optional string val = 2;
+}
